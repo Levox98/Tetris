@@ -1,7 +1,5 @@
 package com.kotlinexamples.tetris
 
-import com.kotlinexamples.tetris.models.Duck
-import com.kotlinexamples.tetris.models.RubberDuck
 import org.junit.Test
 
 import org.junit.Assert.*

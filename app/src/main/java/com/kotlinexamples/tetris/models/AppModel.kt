@@ -199,7 +199,7 @@ class AppModel {
     }
 
     private fun assessField() {
-        for (i in 0 until field.size) {
+        for (i in field.indices) {
             var emptyCells = 0
             for (j in 0 until field[i].size) {
                 val status = getCellStatus(i, j)
