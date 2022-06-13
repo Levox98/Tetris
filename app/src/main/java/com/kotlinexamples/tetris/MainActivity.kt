@@ -22,10 +22,13 @@ class MainActivity : AppCompatActivity() {
         val btnStartGame = findViewById<Button>(R.id.btn_new_game)
         val btnResetScore = findViewById<Button>(R.id.btn_reset_score)
         val btnExit = findViewById<Button>(R.id.btn_exit)
+        tvHighScore = findViewById(R.id.tv_high_score)
 
         btnStartGame.setOnClickListener(this::onBtnNewGameClick)
         btnResetScore.setOnClickListener(this::onBtnResetScoreClick)
         btnExit.setOnClickListener(this::onBtnExitClick)
+
+        updateHighScore()
     }
 
     private fun onBtnNewGameClick(view: View) {
@@ -43,5 +46,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun onBtnExitClick(view: View) {
         System.exit(0)
+    }
+
+    private fun updateHighScore() {
+        val appPreferences = AppPreferences(this)
+        tvHighScore?.text = "High score: ${ appPreferences.getHighScore() }"
     }
 }

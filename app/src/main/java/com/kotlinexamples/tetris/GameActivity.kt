@@ -44,8 +44,6 @@ class GameActivity : AppCompatActivity() {
 
     private fun onBtnRestartClick(view: View) {
         appModel.restartGame()
-
-        Toast.makeText(this, "Test", Toast.LENGTH_LONG).show()
     }
 
     private fun onTetrisViewTouch(view: View, event: MotionEvent): Boolean {
